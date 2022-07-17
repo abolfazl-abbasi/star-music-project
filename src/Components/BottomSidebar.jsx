@@ -22,7 +22,7 @@ const BottomSidebar = () => {
 
   return (
     <>
-      <div className="fixed bottom-0 flex h-16 w-full items-center justify-around bg-[#212121] md:hidden">
+      <div className="fixed bottom-0 flex h-16 w-full items-center justify-around border-t-4 border-[#212121] bg-[#0E0E0E] md:hidden">
         {sideBarLinks.map((link) => (
           <Link to={link.path} className={"text-center"}>
             <link.icon
