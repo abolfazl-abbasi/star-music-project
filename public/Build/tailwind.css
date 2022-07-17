@@ -1071,17 +1071,8 @@ video {
   border-radius: 1rem;
 }
 
-.border-t-2 {
-  border-top-width: 2px;
-}
-
 .border-t-4 {
   border-top-width: 4px;
-}
-
-.border-green-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
 .border-\[\#212121\] {
@@ -1089,13 +1080,23 @@ video {
   border-color: rgb(33 33 33 / var(--tw-border-opacity));
 }
 
-.bg-\[\#212121\] {
+.border-green-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
+}
+
+.bg-\[\#0E0E0E\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(33 33 33 / var(--tw-bg-opacity));
+  background-color: rgb(14 14 14 / var(--tw-bg-opacity));
 }
 
 .bg-white\/20 {
   background-color: rgb(255 255 255 / 0.2);
+}
+
+.bg-\[\#212121\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 33 33 / var(--tw-bg-opacity));
 }
 
 .bg-white\/60 {
@@ -1107,18 +1108,13 @@ video {
   background-color: rgb(217 152 61 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#121212\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0E0E0E\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 14 14 / var(--tw-bg-opacity));
-}
-
 .fill-\[\#292D32\] {
   fill: #292D32;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-0 {
@@ -1146,11 +1142,6 @@ video {
   padding-right: 1rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -1163,20 +1154,20 @@ video {
   padding-top: 0.25rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
 }
 
 .pr-5 {
   padding-right: 1.25rem;
 }
 
-.pr-1 {
-  padding-right: 0.25rem;
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .pb-\[2px\] {
@@ -1217,6 +1208,10 @@ video {
 
 .pb-\[90px\] {
   padding-bottom: 90px;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .text-center {
@@ -1342,30 +1337,6 @@ video {
 
 .\[letter-spacing\:3px\] {
   letter-spacing: 3px;
-}
-
-.\[height\:calc\(100vh-95px\)\] {
-  height: calc(100vh - 95px);
-}
-
-.\[height\:calc\(100vh\)\] {
-  height: calc(100vh);
-}
-
-.\[height\:calc\(100vh-200\)\] {
-  height: calc(100vh - 200);
-}
-
-.\[height\:calc\(100vh-200px\)\] {
-  height: calc(100vh - 200px);
-}
-
-.\[height\:calc\(100vh-170px\)\] {
-  height: calc(100vh - 170px);
-}
-
-.\[height\:calc\(100vh-150px\)\] {
-  height: calc(100vh - 150px);
 }
 
 .\[height\:calc\(100vh-145px\)\] {
@@ -1553,6 +1524,7 @@ body {
 .swiper-wrapper {
   display: flex;
   align-items: center;
+  padding: 0 20px;
 }
 
 .ArtistImage:hover {

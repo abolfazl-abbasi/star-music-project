@@ -11,8 +11,8 @@ const CardsManager = ({ Component, num, dataArray, title, comName }) => {
     ();
   return (
     <>
-      <div className={`container${comName} mb-7 overflow-hidden pl-5`}>
-        <div className="flex w-full items-center justify-between pb-2 pr-5 md:pb-3">
+      <div className={`container${comName} mb-7 overflow-hidden`}>
+        <div className="flex w-full items-center justify-between px-5 pb-2 md:pb-3">
           <div className="md:text-2xl">{title}</div>
           <Link
             to={"/"}

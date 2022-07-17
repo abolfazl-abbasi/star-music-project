@@ -234,7 +234,7 @@ const Home = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper mb-5 mt-3 h-48 overflow-hidden rounded-2xl px-5 sm:h-64 md:h-72 lg:h-[380px]"
+        className="mySwiper mb-5 mt-3 h-48 overflow-hidden rounded-2xl pr-10 sm:h-64 md:h-72 lg:h-[380px]"
       >
         <SwiperSlide>
           <div className="h-full w-full overflow-hidden rounded-2xl">
