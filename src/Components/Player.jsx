@@ -155,7 +155,7 @@ const Player = () => {
   return (
     <>
       <div
-        className="music-player fixed bottom-0 flex h-20 w-screen select-none flex-col md:h-24"
+        className="music-player fixed bottom-16 flex h-20 w-screen select-none flex-col md:bottom-0 md:h-24"
         ref={musicPLayer}
       >
         <div className="relative top-0 w-full">

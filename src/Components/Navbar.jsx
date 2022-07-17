@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="musicNavbar sticky top-0 grid h-16 w-full grid-cols-2 pr-5 pl-5 sm:h-24 sm:grid-cols-5 lg:grid-cols-3">
+      <div className="musicNavbar sticky top-0 z-50 grid h-16 w-full grid-cols-2 pr-5 pl-5 sm:h-24 sm:grid-cols-5 lg:grid-cols-3">
         <div className="col-span-1 flex items-center">
           <Link className="mr-4 hidden h-10 w-10 items-center justify-center rounded-[10px] bg-[#212121] pb-[2px] text-[30px] md:flex">
             {"<"}

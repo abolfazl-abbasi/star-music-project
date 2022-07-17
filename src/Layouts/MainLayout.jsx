@@ -2,17 +2,19 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Player from "../Components/Player";
 import Sidebar from "../Components/Sidebar";
+import BottomSidebar from "../Components/BottomSidebar";
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <div className="grid w-full grid-cols-4 lg:grid-cols-5">
+      <div className="items-star flex h-full min-h-screen w-full pb-[90px]">
         <Sidebar />
-        <div className="salam col-span-4 md:col-span-3 lg:col-span-4">
+        <div className="mb-40 w-full overflow-auto [height:calc(100vh-95px)] ">
           <Navbar />
-          {"children"}
+          <div className="childrenSection">{children}</div>
         </div>
         <Player />
+        <BottomSidebar />
       </div>
     </>
   );

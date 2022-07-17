@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Switch>
-        <Route path={"/"} exact>
+        <Route path={"*"} exact>
           <MainLayout>
             <Home />
           </MainLayout>

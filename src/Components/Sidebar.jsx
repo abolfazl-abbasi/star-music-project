@@ -67,7 +67,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className="absolute left-0 top-0 h-screen w-56 bg-[#212121] transition-all md:static md:col-span-1 md:block md:w-auto"
+        className="fixed left-0 top-0 w-72 bg-[#212121] transition-all md:static md:block lg:w-80"
         ref={sideBar}
         style={{ left: "-350px" }}
       >

@@ -11,6 +11,8 @@ body {
   font-family: Manrope;
   background-color: #121212;
   color: white;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .sideBarLink-active {
@@ -45,7 +47,7 @@ body {
 
 .music-player {
   background: rgba(18, 18, 18, 0.4);
-  backdrop-filter: blur(74px);
+  backdrop-filter: blur(10px);
 }
 
 .rangeInput {
@@ -102,5 +104,73 @@ body {
 
 .musicNavbar {
   background: rgba(18, 18, 18, 0.4);
-  backdrop-filter: blur(74px);
+  backdrop-filter: blur(32px);
+}
+
+.cardContent {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 9, 17, 0.5) -96.72%,
+    #0e0e0e -96.69%,
+    rgba(86, 86, 86, 0) 184.43%
+  );
+  backdrop-filter: blur(30px);
+}
+.cardContentPlay {
+  background: linear-gradient(
+    222.22deg,
+    #ffffff 12.65%,
+    rgba(255, 255, 255, 0) 216.78%
+  );
+}
+
+.MusicCard:hover .cardContentPlay {
+  top: 6px;
+}
+
+.MusicCard:hover .cardContent {
+  bottom: 0;
+}
+
+.ArtistCard:hover .cardContentPlay {
+  top: 6px;
+}
+
+.ArtistCard:hover .cardContent {
+  bottom: 0;
+}
+
+.PlaylistCard:hover .cardContentPlay {
+  top: 6px;
+}
+
+.PlaylistCard:hover .cardContent {
+  bottom: 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ArtistImage:hover {
+  border-radius: 100%;
+}
+
+.swiper-pagination-bullet {
+  @apply h-2 w-2 md:h-[14px] md:w-[14px];
+  opacity: 100;
+  background: white;
+  border: 1px solid black;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  @apply h-2 w-12 md:h-[14px] md:w-20;
+  transition: 0.3s;
+  opacity: 100;
+  background: red;
+  border-radius: 10px;
+  border: 1px solid red;
 }
