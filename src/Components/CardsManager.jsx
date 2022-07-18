@@ -28,18 +28,18 @@ const CardsManager = ({ Component, num, dataArray, title, comName }) => {
             -e.translate >=
             document.querySelector(`.container${comName} .swiper-slide`)
               .clientWidth *
-              dataArray.length -
+              dataArray.slice(0, num ? num : dataArray.length).length -
               document.querySelector(`.container${comName}`).clientWidth +
               100
               ? document.querySelector(".childrenSection").clientWidth <
                 document.querySelector(`.container${comName} .swiper-slide`)
                   .clientWidth *
-                  dataArray.length
+                  dataArray.slice(0, num ? num : dataArray.length).length
                 ? e.translateTo(
                     -document.querySelector(
                       `.container${comName} .swiper-slide`
                     ).clientWidth *
-                      dataArray.length +
+                      dataArray.slice(0, num ? num : dataArray.length).length +
                       document.querySelector(`.container${comName}`)
                         .clientWidth -
                       20
@@ -51,7 +51,7 @@ const CardsManager = ({ Component, num, dataArray, title, comName }) => {
           }
           speed={800}
         >
-          {dataArray.map((cardData) => (
+          {dataArray.slice(0, num ? num : dataArray.length).map((cardData) => (
             <SwiperSlide
               className="musicCard flex !w-fit cursor-pointer justify-start"
               key={cardData}

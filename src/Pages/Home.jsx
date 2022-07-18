@@ -8,6 +8,8 @@ import ArtistCard from "../Components/ArtistCard";
 import PlaylistCard from "../Components/PlaylistCard";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
+import MainSlider from "../Components/MainSlider";
 
 const Home = () => {
   const [Musics, setMusics] = useState([
@@ -226,58 +228,31 @@ const Home = () => {
     { playlistId: 22222, playlistName: "PlayList 1", numOfSongs: 14 },
     { playlistId: 22222, playlistName: "PlayList 1", numOfSongs: 14 },
   ]);
+
+  const [Banners, setBanners] = useState([
+    { bannerId: 22222 },
+    { bannerId: 22222 },
+    { bannerId: 22222 },
+    { bannerId: 22222 },
+    { bannerId: 22222 },
+    { bannerId: 22222 },
+  ]);
+
   return (
     <>
-      <Swiper
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper mb-5 mt-3 h-48 overflow-hidden rounded-2xl pr-10 sm:h-64 md:h-72 lg:h-[380px]"
-      >
-        <SwiperSlide>
-          <div className="h-full w-full overflow-hidden rounded-2xl">
-            <img
-              src={require("./../Assets/Images/art-of-sound-banner.jfif")}
-              alt=""
-              className="h-full w-full"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-full w-full overflow-hidden rounded-2xl">
-            <img
-              src={require("./../Assets/Images/art-of-sound-banner.jfif")}
-              alt=""
-              className="h-full w-full"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-full w-full overflow-hidden rounded-2xl">
-            <img
-              src={require("./../Assets/Images/art-of-sound-banner.jfif")}
-              alt=""
-              className="h-full w-full"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-full w-full overflow-hidden rounded-2xl">
-            <img
-              src={require("./../Assets/Images/art-of-sound-banner.jfif")}
-              alt=""
-              className="h-full w-full"
-            />
-          </div>
-        </SwiperSlide>
-      </Swiper>
+      <MainSlider cardData={Banners} />
+      <CardsManager
+        Component={MusicCard}
+        comName={"MusicCard"}
+        dataArray={Musics}
+        title={"New Podcasts"}
+      />
       <CardsManager
         Component={MusicCard}
         comName={"MusicCard"}
         dataArray={Musics}
         title={"Trends"}
+        num={10}
       />
       <CardsManager
         Component={ArtistCard}
