@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { SearchNormal1, Crown, UserOctagon, User, Crown1 } from "iconsax-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const musicNavbar = useRef();
+
   return (
     <>
-      <div className="musicNavbar sticky top-0 z-50 grid h-16 w-full grid-cols-2 pr-5 pl-5 sm:h-24 sm:grid-cols-5 lg:grid-cols-3">
+      <div
+        className=" navbar sticky top-0 z-[999999] grid h-16 w-full grid-cols-2 pr-5 pl-5 sm:h-24 sm:grid-cols-5 lg:grid-cols-3"
+        ref={musicNavbar}
+      >
         <div className="col-span-1 flex items-center">
           <Link className="mr-4 hidden h-10 w-10 items-center justify-center rounded-[10px] bg-[#212121] pb-[2px] text-[30px] md:flex">
             {"<"}

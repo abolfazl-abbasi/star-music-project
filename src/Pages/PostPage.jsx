@@ -81,7 +81,7 @@ const PostPage = () => {
       </div>
       {/* alslsls */}
       <div className="relative bottom-16 h-[450px] w-full sm:hidden">
-        <div className="absolute top-20 left-5 z-[999999]  flex flex-col">
+        <div className="absolute top-20 left-5 z-[99999]  flex flex-col">
           <div className="tet-white flex w-1/2 items-center text-xs">
             <Microphone2 className={"mt-1 mr-2 h-5 w-5"} variant="Bulk" />
             <span className="text-white/70">abolfazl • folani • ye Khar</span>

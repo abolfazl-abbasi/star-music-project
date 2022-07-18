@@ -692,6 +692,10 @@ video {
   z-index: 999999;
 }
 
+.z-\[99999\] {
+  z-index: 99999;
+}
+
 .z-\[5000\] {
   z-index: 5000;
 }
@@ -1669,7 +1673,7 @@ body {
 }
 
 .musicNavbar {
-  background: rgba(18, 18, 18, 0.4);
+  background: rgba(18, 18, 18, 0.5);
   -webkit-backdrop-filter: blur(32px);
           backdrop-filter: blur(32px);
 }
