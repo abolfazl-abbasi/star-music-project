@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
       <div className="items-star flex h-full min-h-screen w-full pb-[90px]">
         <Sidebar />
         <div
-          className="mainSection mb-40 w-full overflow-auto [height:calc(100vh-145px)] md:[height:calc(100vh-95px)]"
+          className="mainSection mb-52 w-full overflow-auto [height:calc(100vh-145px)] md:[height:calc(100vh-95px)]"
           ref={mainSection}
         >
           <Navbar />

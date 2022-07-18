@@ -12,7 +12,7 @@ const Navbar = () => {
         ref={musicNavbar}
       >
         <div className="col-span-1 flex items-center">
-          <Link className="mr-4 hidden h-10 w-10 items-center justify-center rounded-[10px] bg-[#212121] pb-[2px] text-[30px] md:flex">
+          <Link className="mr-4 hidden h-10 w-10 items-center justify-center rounded-[10px] bg-[#212121] pb-[2px] text-[30px] transition-all duration-200 hover:bg-[#2f2f2f] md:flex">
             {"<"}
           </Link>
           <Link className="mr-4 flex h-8 w-8 flex-col items-center justify-center rounded-[10px] bg-[#212121] pb-[2px] text-[30px] sm:h-10 sm:w-10 md:hidden">

@@ -49,7 +49,7 @@ const CardsManager = ({ Component, num, dataArray, title, comName }) => {
                 : null
               : null
           }
-          speed={800}
+          speed={100}
         >
           {dataArray.slice(0, num ? num : dataArray.length).map((cardData) => (
             <SwiperSlide

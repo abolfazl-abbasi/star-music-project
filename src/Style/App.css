@@ -7,6 +7,10 @@
   src: url("./../Assets/Fonts/Manrope/Manrope-VariableFont_wght.ttf");
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: Manrope;
   background-color: #121212;
@@ -99,6 +103,15 @@ body {
   );
 }
 
+:active {
+  /* background-color: transparent; */
+  outline: none !important;
+}
+
+:focus-visible {
+  /* background-color: red; */
+}
+
 .repeatMusicBtn path:last-child {
   display: none;
 }
@@ -160,7 +173,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-  @apply h-2 w-2 md:h-[14px] md:w-[14px];
+  @apply h-2 w-2 md:h-[10px] md:w-[10px];
   opacity: 100;
   background: white;
   border: 1px solid black;
@@ -169,7 +182,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  @apply h-2 w-12 md:h-[14px] md:w-20;
+  @apply h-2 w-12 md:h-[10px] md:w-14;
   transition: 0.3s;
   opacity: 100;
   background: red;

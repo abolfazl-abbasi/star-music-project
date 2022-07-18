@@ -104,7 +104,7 @@ const Sidebar = () => {
                 <h2 className="text-xs [letter-spacing:3px]">
                   {i18next.t("PLAYLISTS")}
                 </h2>
-                <div className="text-lg">+</div>
+                <div className="cursor-pointer text-lg">+</div>
               </div>
               <div className="mx-3 max-h-44 overflow-y-auto">
                 {PlayLists.map((playList) => (
