@@ -8,7 +8,7 @@ import {
   Clock,
   LanguageSquare,
 } from "iconsax-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { digitsEnToAr, addCommas } from "@persian-tools/persian-tools";
 import Skeleton from "react-loading-skeleton";
@@ -68,6 +68,17 @@ const PostPage = () => {
       });
     }, 3000);
   }, []);
+
+  const [IsImageLoaded, setIsImageLoaded] = useState(false);
+
+  if (postData.postImage) {
+    const mainImageSrc = new Image();
+    mainImageSrc.src = postData.postImage;
+    mainImageSrc.addEventListener("load", () => {
+      setIsImageLoaded(true);
+      console.log("loaded");
+    });
+  }
 
   return (
     <>
@@ -160,17 +171,17 @@ const PostPage = () => {
             />
           )}
         </div>
-        {postData.postImage ? (
+        {postData.postImage && IsImageLoaded ? (
           <img
             src={postData.postImage || ""}
             alt=""
-            className="absolute right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]"
+            className={`absolute right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]`}
           />
         ) : (
           <Skeleton
             baseColor={"#121212"}
             highlightColor={"#ffffff25"}
-            className="absolute right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]"
+            className={`absolute right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]`}
           />
         )}
         <div
@@ -183,7 +194,7 @@ const PostPage = () => {
           }}
         >
           <div className="flex items-center">
-            {postData.postImage ? (
+            {postData.postImage && IsImageLoaded ? (
               <img
                 src={postData.postImage || ""}
                 alt=""
@@ -329,7 +340,7 @@ const PostPage = () => {
             />
           )}
         </div>
-        {postData.postImage ? (
+        {postData.postImage && IsImageLoaded ? (
           <>
             <img
               src={postData.postImage || ""}
