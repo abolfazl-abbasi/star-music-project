@@ -189,3 +189,14 @@ body {
   border-radius: 10px;
   border: 1px solid red;
 }
+
+@keyframes slide-left {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-300%);
+    transform: translateX(-300%);
+  }
+}
