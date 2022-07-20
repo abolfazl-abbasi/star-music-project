@@ -237,7 +237,7 @@ const Player = () => {
               onClick={() => (musicAudio.current.currentTime -= 15)}
             />
             <div
-              className="playPauseButton ml-2 flex h-12 w-12 items-center justify-center rounded-full transition-all hover:scale-110 lg:ml-0"
+              className="playPauseButton ml-2 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all hover:scale-110 lg:ml-0"
               onClick={() =>
                 !playing ? PlayMusicHandler() : PauseMusicHandler()
               }
@@ -249,7 +249,7 @@ const Player = () => {
                   viewBox="0 0 12 13"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={"ml-[2px] h-5 w-5 cursor-pointer"}
+                  className={"ml-[2px] h-5 w-5"}
                 >
                   <path
                     d="M0.5 2.29628V10.2713C0.5 11.9046 2.275 12.9296 3.69167 12.1129L7.15 10.1213L10.6083 8.12128C12.025 7.30461 12.025 5.26294 10.6083 4.44628L7.15 2.44628L3.69167 0.45461C2.275 -0.362057 0.5 0.65461 0.5 2.29628Z"
@@ -257,10 +257,7 @@ const Player = () => {
                   />
                 </svg>
               ) : (
-                <Pause
-                  variant="Bold"
-                  className={"h-6 w-6 cursor-pointer text-[#212121]"}
-                />
+                <Pause variant="Bold" className={"h-6 w-6 text-[#212121]"} />
               )}
             </div>
             <Forward

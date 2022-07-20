@@ -76,7 +76,7 @@ const PostPage = () => {
     mainImageSrc.src = postData.postImage;
     mainImageSrc.addEventListener("load", () => {
       setIsImageLoaded(true);
-      console.log("loaded");
+      // console.log("loaded");
     });
   }
 
@@ -171,7 +171,7 @@ const PostPage = () => {
             />
           )}
         </div>
-        {postData.postImage && IsImageLoaded ? (
+        {/* {postData.postImage && IsImageLoaded ? (
           <img
             src={postData.postImage || ""}
             alt=""
@@ -183,30 +183,47 @@ const PostPage = () => {
             highlightColor={"#ffffff25"}
             className={`absolute right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]`}
           />
-        )}
-        <div
+        )} */}
+        <img
+          src={postData.postImage || ""}
+          alt=""
+          className={`absolute ${
+            postData.postImage && IsImageLoaded
+              ? "opacity-100"
+              : "absolute opacity-0"
+          } right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]`}
+        />
+        <Skeleton
+          baseColor={"#121212"}
+          highlightColor={"#ffffff25"}
           className={`${
-            postData && postData.postTitle ? "" : "bottom-5"
-          } relative mt-3 hidden w-[calc(100%-420px)] items-center justify-between rounded-lg bg-red-300 p-2 pr-4 xl:flex`}
+            !IsImageLoaded ? "opacity-100" : "absolute opacity-0"
+          } absolute right-24 top-[50%] h-[200px] w-[200px] rounded-2xl shadow-[0px_4px_14px_10px_rgba(0,0,0,0.25)] sm:right-10 sm:top-[15%] md:top-[13%] lg:right-16 lg:top-[15%] lg:h-[230px] lg:w-[230px] xl:h-[350px] xl:w-[350px]`}
+        />
+        <div
+          className={`${"bottom-5"} relative mt-3 hidden w-[calc(100%-420px)] items-center justify-between rounded-lg bg-red-300 p-2 pr-4 xl:flex`}
           style={{
             background:
               "linear-gradient(270deg, rgba(27, 27, 27, 0.5) 0%, rgba(64, 64, 64, 0.25) 51.08%, rgba(255, 255, 255, 0.11) 100%)",
           }}
         >
           <div className="flex items-center">
-            {postData.postImage && IsImageLoaded ? (
-              <img
-                src={postData.postImage || ""}
-                alt=""
-                className="h-10 w-10 rounded-xl md:h-16 md:w-16"
-              />
-            ) : (
-              <Skeleton
-                baseColor={"#121212"}
-                highlightColor={"#ffffff25"}
-                className="h-10 w-10 rounded-xl md:h-16 md:w-16"
-              />
-            )}
+            <img
+              src={postData.postImage || ""}
+              alt=""
+              className={`h-10 w-10 rounded-xl md:h-16 md:w-16  ${
+                postData.postImage && IsImageLoaded
+                  ? "opacity-100"
+                  : "absolute opacity-0"
+              }`}
+            />
+            <Skeleton
+              baseColor={"#121212"}
+              highlightColor={"#ffffff25"}
+              className={`h-10 w-10 rounded-xl md:h-16 md:w-16  ${
+                !IsImageLoaded ? "opacity-100" : "absolute opacity-0"
+              }`}
+            />
             <div className="ml-3 w-full">
               {postData.postTitle ? (
                 <h4 className="text-lg">{postData.postTitle}</h4>
@@ -340,28 +357,28 @@ const PostPage = () => {
             />
           )}
         </div>
-        {postData.postImage && IsImageLoaded ? (
-          <>
-            <img
-              src={postData.postImage || ""}
-              alt=""
-              className="absolute left-0 top-0 h-[450px] w-screen rounded-b-[50px] opacity-40 blur-sm"
-            />
-            <img
-              src={postData.postImage || ""}
-              alt=""
-              className="absolute bottom-10 left-1/2 z-[5000] h-48 w-48 translate-y-1/2 -translate-x-1/2 rounded-xl"
-            />
-          </>
-        ) : (
-          <>
-            <Skeleton
-              baseColor={"#121212"}
-              highlightColor={"#ffffff25"}
-              className="absolute bottom-10 left-1/2 z-[5000] h-48 w-48 translate-y-1/2 -translate-x-1/2 rounded-xl"
-            />
-          </>
-        )}
+        {/* {postData.postImage && IsImageLoaded ? ( */}
+        <img
+          src={postData.postImage || ""}
+          alt=""
+          className={`absolute left-0 top-0 h-[450px] w-screen rounded-b-[50px] opacity-40 blur-sm  ${
+            postData.postImage && IsImageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <img
+          src={postData.postImage || ""}
+          alt=""
+          className={`absolute bottom-10 left-1/2 z-[5000] h-48 w-48 translate-y-1/2 -translate-x-1/2 rounded-xl  ${
+            postData.postImage && IsImageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <Skeleton
+          baseColor={"#121212"}
+          highlightColor={"#ffffff25"}
+          className={`absolute bottom-10 left-1/2 z-[5000] h-48 w-48 translate-y-1/2 -translate-x-1/2 rounded-xl ${
+            !IsImageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
       </div>
       <div className="relative bottom-32 mx-8 rounded-[32px] bg-[#212121] px-5 pt-[150px] pb-8 text-justify sm:-bottom-72 sm:mx-0 sm:rounded-none sm:pt-6 md:bottom-0 md:mx-5 md:mt-6 md:rounded-[24px]">
         <h1 className="mb-3 flex items-center justify-center text-center text-2xl sm:mb-5">

@@ -27,7 +27,7 @@ i18next.init({
   },
 });
 
-console.log(i18next.t("HOME"));
+// console.log(i18next.t("HOME"));
 
 const Sidebar = () => {
   const [SideBarLinks] = useState([

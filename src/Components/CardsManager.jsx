@@ -51,14 +51,16 @@ const CardsManager = ({ Component, num, dataArray, title, comName }) => {
           }
           speed={1200}
         >
-          {dataArray.slice(0, num ? num : dataArray.length).map((cardData) => (
-            <SwiperSlide
-              className="musicCard flex !w-fit cursor-pointer justify-start"
-              key={cardData}
-            >
-              <Component cardData={cardData} />
-            </SwiperSlide>
-          ))}
+          {dataArray
+            .slice(0, num ? num : dataArray.length)
+            .map((cardData, i) => (
+              <SwiperSlide
+                className="musicCard flex !w-fit cursor-pointer justify-start"
+                key={i}
+              >
+                <Component cardData={cardData} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </>

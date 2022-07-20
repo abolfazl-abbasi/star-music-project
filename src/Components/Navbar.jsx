@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className=" navbar sticky top-0 z-[999999] grid h-16 w-full grid-cols-2 pr-5 pl-5 sm:h-24 sm:grid-cols-5 lg:grid-cols-3"
+        className=" navbar sticky top-0 z-[999999] grid h-16 w-full grid-cols-2 pr-5 pl-5 sm:h-20 sm:grid-cols-5 lg:grid-cols-3"
         ref={musicNavbar}
       >
         <div className="col-span-1 flex items-center">
